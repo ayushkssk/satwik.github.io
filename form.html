@@ -1,33 +1,75 @@
+<!-- Created by usman -->
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form</title>
-    <script></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>School Admission Form</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/fstyle.css">
 </head>
 
 <body>
-    <div id="all">
-        <h1 id="wlcm"></h1>
-        <div action="#" id="form">
-            <h1 id="form-title">Sign Up</h1>
-            <input id="name" class="field" type="text" placeholder="Name">
-            <input id="email" class="field" type="email" placeholder="Email">
-            <input id="pw" class="field" type="password" placeholder="Password">
-            <input id="submit" class="submit" type="submit" value="Submit">
-        </div>
+    <div id="main">
+        <button><a href="index.html" style="text-decoration: none; color: black;">Home</a></button>
+        <h1 id="title" style="text-align: center;">Admission form</h1>
+        <p id="description" style="text-align: center" ;>Please fill the following entries carefully</p><br>
+        <form action="" id="survey-form">
+            <label for="name" id="name-label">Name: </label><pre style="display: inline;">                             </pre>
+            <input class="boxes" type="text" id="name" placeholder="First-Name" required>
+            <label for="name" id=""> - </label>
+            <input class="boxes" type="text" id="" placeholder="Last-Name" required>
+            <br><br>
+            <label for="date">Date of Birth: </label><pre style="display: inline;">                </pre>
+            <input class="boxes" type="date" name="" id="">
+            <br><br>
+            <label for="contact">Contact Number: </label><pre style="display: inline;">         </pre>
+            <label for="">+91</label>
+            <label for="">-</label>
+            <input class="boxes contact2" type="text" maxlength="7">
+            <br><br>
+            <label for="email" id="email-label">Email: </label> <pre style="display: inline;">                       </pre>
+            <pre style="display: inline;">      </pre>
+            <input type="email" name="" class="boxes" id="email" placeholder="example@mail.com" required>
+            <br><br>
+            <label for="age" id="number-label">Age: </label>
+            <pre style="display: inline;">                                  </pre>
+            <input type="number" name="" id="number" class="boxes" min="2" max="7" placeholder="age">
+            <br><br>
+            <label for="">Class for Admission: </label><pre style="display: inline;">    </pre>
+            <select name="Class" id="dropdown" class="boxes">
+                <option value="Select" disabled>Select</option>
+                <option value="Six">Play Group</option>
+                <option value="seven">Nursery</option>
+                <option value="eight">LKG</option>
+                <option value="eight">UKG</option>
+                <option value="eight">One</option>
+            </select>
+            <br><br>
+            <label for="">Gender: </label>
+            <pre style="display: inline;">                           </pre>
+            <input type="radio" name="male-female" id="" value="male">Male
+            <input type="radio" name="male-female" id="" value="female">Female
+            <br><br>
+            <label for="">Games which can play: </label>
+            <input type="checkbox" name="Cricket" id="checkbox" value="cricket">Cricket
+            <input type="checkbox" name="" id="checkbox" value="FootBall">FootBall
+            <br><br>
+            <textarea name="Extras" id="" cols="50" rows="6" placeholder="Additional Information if any"></textarea>
+            <br>
+            <input type="submit" value="Submit" id="submit" style="  background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            width: 100%;
+            cursor: pointer;">
+        </form>
     </div>
-
-    <script>
-        $(document).ready(function() {
-            $("#submit").on("click", function() {
-                $("#form").fadeOut();
-                $("#wlcm").html("Hello " + $("#name").val() + "<br> Thanks for signing up!");
-            });
-        });
-    </script>
 </body>
 
 </html>
